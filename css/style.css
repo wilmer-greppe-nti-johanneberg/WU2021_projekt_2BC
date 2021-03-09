@@ -6,12 +6,12 @@
 
     body {
         display: flex;
-        justify-content: space-around;
-        background-color: skyblue;
+        justify-content: center;
+        background-color: rgb(238, 238, 238);
     }
 
     main {
-        height: 100vh;
+        height: 200vh;
         width: 1024px;
         display: flex;
         flex-direction: column;
@@ -19,8 +19,9 @@
 
     header {
         margin-top: 10px;
-        width: 1024px;
-        height: 200px;
+        margin-bottom: 200px;
+        min-width: 1024px;
+        height: auto;
         display: flex;
     }
 
@@ -37,55 +38,82 @@
     }
 
     #container {
-        background-color: skyblue;
         height: calc(100% - 200px);
         width: 100%;
         display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .del2 {
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 95%;
+        height: 100%;
+        background-color: #6E6E6E;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .article {
+        width: 100%;
+        height: 30%;
+        background-color: gray;
+        font-size: 40px;
+        display: flex;
+        flex-direction: column;
         justify-content: space-around;
         align-items: center;
     }
 
-    .del {
-        height: 90%;
-        width: 45%;
-        background-color: teal;
+    .article > h1 {
+        font-size: 70px;
     }
 
-    .del2 {
-        display: grid;
-        grid-template-areas: 
-        "se se"
-        "d1 d2"
-        ;
+    .article > p {
+        margin: 0 30px 50px 30px;
     }
 
-    .article1 {
-        grid-area: se;
-        height: 90%;
-        width: 90%;
-        background-color: tomato;
-        align-self: center;
-        justify-self: center;
+    .menu {
+        z-index: 99999;
+        position: fixed;
+        left: -410px;
+        top: 0;
+        width: 400px;
+        height: 100vh;
+        transition: left 1s;
+        background-color: rgb(61, 61, 61);
+        box-shadow: 0 0 20px 0 rgb(0, 0, 0);
     }
 
-    .article2 {
-        grid-area: d1;
-        height: 90%;
-        width: 85%;
-        background-color: greenyellow;
-        align-self: center;
-        justify-self: center;
-        margin-left: 10px;
+    .show {
+        left: 0;
     }
 
-    .article3 {
-        grid-area: d2;
-        height: 90%;
-        width: 85%;
-        background-color: greenyellow;
-        align-self: center;
-        justify-self: center;
-        margin-right: 10px;
+    .movebutton {
+        left: 310px;
+    }
+
+    .aside_button {
+        height: 70px;
+        width: 70px;
+        z-index: 10000;
+        position: fixed;
+        left: 10px;
+        top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        transition: left 1s;
+        cursor: pointer;
+    }
+
+    .aside_button i.material-icons{
+        font-size: 2.5rem;
+        z-index: 9999;
     }
 
 }
