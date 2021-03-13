@@ -79,7 +79,7 @@
     .menu {
         z-index: 99999;
         position: fixed;
-        left: -410px;
+        left: -420px;
         top: 0;
         width: 400px;
         height: 100vh;
@@ -90,6 +90,7 @@
 
     .show {
         left: 0;
+
     }
 
     .movebutton {
@@ -111,9 +112,16 @@
         cursor: pointer;
     }
 
-    .aside_button i.material-icons{
+    i.material-icons{
         font-size: 2.5rem;
         z-index: 9999;
+    }
+
+    .back_arrow {
+        position: relative;
+        left: 360px;
+        top: 10px;
+        color: white;
     }
 
 }
