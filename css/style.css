@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap');
+
 * {
     margin: 0;
 }
@@ -6,11 +8,20 @@
 
     body {
         display: flex;
-        justify-content: center;
-        background-color: rgb(238, 238, 238);
+        justify-content: center; 
+    }
+
+    .background {
+        position: fixed;
+        z-index: 0;
+        height: 100vh;
+        width: 100vw;
+        background-image: url("/img/sunset.jpg");
+        background-size: 100vw 100vh;
     }
 
     main {
+        z-index: 1;
         height: 200vh;
         width: 1024px;
         display: flex;
@@ -51,7 +62,6 @@
         padding-right: 10px;
         width: 95%;
         height: 100%;
-        background-color: #6E6E6E;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -60,16 +70,19 @@
     .article {
         width: 100%;
         height: 30%;
-        background-color: gray;
         font-size: 40px;
+        background-color: rgb(214, 214, 214, 0.1);
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        border-radius: 100px;
+        box-shadow: 20px 20px 20px 10px rgb(0, 0, 0, 0.15);
     }
 
     .article > h1 {
         font-size: 70px;
+        font-family: 'Teko', sans-serif;
     }
 
     .article > p {
@@ -86,15 +99,20 @@
         transition: left 1s;
         background-color: rgb(61, 61, 61);
         box-shadow: 0 0 20px 0 rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .menu > a {
+        font-size: 300%;
+        color: rgb(184, 184, 184);
+        font-family: 'Teko', sans-serif;
     }
 
     .show {
         left: 0;
-
-    }
-
-    .movebutton {
-        left: 310px;
     }
 
     .aside_button {
@@ -119,37 +137,33 @@
 
     .back_arrow {
         position: relative;
-        left: 360px;
-        top: 10px;
+        left: 170px;
+        top: 0;
         color: white;
+        cursor: pointer;
+    }
+
+    #emptyspace {
+        height: 50%;
     }
 
 }
 
 @media screen and (max-width: 768px) {
 
-    aside {
-        height: 100px;
-        width: 100px;
-        z-index: 10000;
-        position: absolute;
-        background-color: white;
-        left: 0;
-        top: 180px;
-    }
-
     main {
-        height: 100vh;
-        width: 768px;
+        z-index: 1;
+        height: 200vh;
+        width: 100vw;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
     }
 
     header {
+        margin-top: 70px;
         padding-top: 10px;
         width: 95%;
-        height: 180px;
+        height: 90px;
         display: flex;
         align-self: center;
     }
@@ -157,7 +171,15 @@
     body {
         display: flex;
         justify-content: space-around;
-        background-color: skyblue;
+    }
+
+    .background {
+        position: fixed;
+        z-index: -1000;
+        min-height: 100%;
+        width: 100%;
+        background-image: url("/img/sunset.jpg");
+        background-size: 100vw 100vh;
     }
 
     .logo {
@@ -173,51 +195,104 @@
     }
 
     #container {
-        margin-top: 50px;
-        background-color: skyblue;
-        height: calc(100% - 240px);
+        height: 100%;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 20px;
     }
 
     .del2 {
-        height: 95%;
+        padding-left: 10px;
+        padding-right: 10px;
         width: 95%;
-        background-color: teal;
-        display: grid;
-        grid-template-areas: 
-        "d1 se"
-        "d2 se"
-        ;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
 
-    .article1 {
-        grid-area: se;
-        height: 95%;
-        width: 90%;
-        background-color: tomato;
-        align-self: center;
-        justify-self: center;
+    .article {
+        width: 100%;
+        height: 30%;
+        font-size: 40px;
+        background-color: rgb(214, 214, 214, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 100px;
+        box-shadow: 20px 20px 20px 10px rgb(0, 0, 0, 0.15);
     }
 
-    .article2 {
-        grid-area: d1;
-        height: 90%;
-        width: 90%;
-        background-color: greenyellow;
-        align-self: center;
-        justify-self: center;
+    .article > h1 {
+        font-size: 35px;
+        font-family: 'Teko', sans-serif;
     }
 
-    .article3 {
-        grid-area: d2;
-        height: 90%;
-        width: 90%;
-        background-color: greenyellow;
-        align-self: center;
-        justify-self: center;
+    .article > p {
+        margin: 0 30px 50px 30px;
+        font-size: 18px;
+    }
+
+    .menu {
+        z-index: 99999;
+        position: fixed;
+        left: -220px;
+        top: 0;
+        width: 200px;
+        height: 100vh;
+        transition: left 1s;
+        background-color: rgb(61, 61, 61);
+        box-shadow: 0 0 20px 0 rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .menu > a {
+        font-size: 300%;
+        color: rgb(184, 184, 184);
+        font-family: 'Teko', sans-serif;
+    }
+
+    .show {
+        left: 0;
+
+    }
+
+    .aside_button {
+        height: 70px;
+        width: 70px;
+        z-index: 10000;
+        position: fixed;
+        left: 10px;
+        top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        transition: left 1s;
+        cursor: pointer;
+    }
+
+    i.material-icons{
+        font-size: 2.5rem;
+        z-index: 9999;
+    }
+
+    .back_arrow {
+        position: relative;
+        left: 80px;
+        top: 10px;
+        color: white;
+        cursor: pointer;
+    }
+
+    #emptyspace {
+        height: 50%;
     }
 
 }
