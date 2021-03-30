@@ -70,7 +70,7 @@
     }
 
     #container {
-        height: calc(100% - 200px);
+        height: 2400px;
         width: 100%;
         display: flex;
         justify-content: center;
