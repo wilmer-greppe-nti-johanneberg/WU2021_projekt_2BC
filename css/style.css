@@ -43,12 +43,22 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        z-index: 11;
     }
 
     .logo {
         height: 100%;
         width: 20%;
-        background-color: royalblue;
+    }
+
+    .logo > img {
+        width: 200px;
+        height: auto;
+        border-radius: 100px;
+        border-color: rgba(0, 0, 0, 0.4);
+        border-style: solid;
+        box-shadow: 10px 10px 15px 10px rgb(0, 0, 0, 0.15);
+        z-index: 10;
     }
 
     .rubrik {
@@ -59,7 +69,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        background-color: rgb(214, 214, 214, 0.1);
+        background-color: rgb(214, 214, 214, 0.4);
         border-radius: 40px;
         padding-left: 10px;
         padding-right: 10px;
@@ -91,7 +101,7 @@
     .article {
         width: 100%;
         height: 30%;
-        background-color: rgb(214, 214, 214, 0.2);
+        background-color: rgb(214, 214, 214, 0.4);
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -186,12 +196,10 @@
     }
 
 
-    
 
 
 
     #main2 {
-        width: 1024px;
         height: 100%;
     }
 
@@ -203,10 +211,11 @@
         justify-content: space-around;
         align-items: center;
         margin-top: 20px;
-        background-color: rgb(214, 214, 214, 0.2);
+        background-color: rgb(214, 214, 214, 0.4);
         border-radius: 50px;
         box-shadow: 30px 30px 30px 20px rgb(0, 0, 0, 0.2);
         text-align: center;
+        margin-bottom: 50px;
     }
 
     #container2 > h1 {
@@ -216,6 +225,285 @@
 
     #container2 > p {
         font-size: 35px;
+    }
+
+
+
+
+
+    #container3 {
+        height: 700px;
+        width: 100%;
+        margin-top: -150px;
+        display: grid;
+        grid-template-areas: 
+        "he he"
+        "ma te"
+        "ad ot"
+        ;
+    }
+
+    #title {
+        grid-area: he;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #kontaktmail {
+        grid-area: ma;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #kontakttelefon {
+        grid-area: te;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #kontaktadress {
+        grid-area: ad;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #otherinfo {
+        grid-area: ot;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .smallarticle {
+        background-color: rgb(214, 214, 214, 0.4);
+        box-shadow: 10px 10px 10px 10px rgb(0, 0, 0, 0.2);
+        width: 90%;
+        height: 90%;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .smallarticle > h1 {
+        font-family: 'Teko', sans-serif;
+        font-size: 5rem;
+    }
+
+    .smallarticle > p {
+        font-size: 35px;
+    }
+
+
+
+
+
+    #main3 {
+        height: 2500px;
+    }
+
+    #container4 {
+        width: 100%;
+        height: 100%;
+        margin-top: -100px;
+        margin-bottom: 50px;
+        border-radius: 50px;
+        background-color: rgb(214, 214, 214, 0.4);
+        box-shadow: 30px 30px 30px 20px rgb(0, 0, 0, 0.2);
+        display: grid;
+        grid-template-areas: 
+        "he he"
+        "a1 a2"
+        "a3 a4"
+        "a5 a6"
+        "a7 a8"
+        "fo fo"
+        ;
+    }
+
+    .title1 {
+        width: 70%;
+        height: 50%;
+        background-color: rgb(214, 214, 214, 0.4);
+        border-radius: 10px;
+        grid-area: he;
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        justify-content: space-around;
+        align-items: center;
+        font-family: 'Teko', sans-serif;
+        font-size: 4rem;
+    }
+
+    .articles {
+        width: 450px;
+        height: 300px;
+        background-color: rgb(214, 214, 214, 0.4);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-self: center;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .article1 {
+        grid-area: a1;
+    }
+
+    .article2 {
+        grid-area: a2;
+    }
+
+    .article3 {
+        grid-area: a3;
+    }
+
+    .article4 {
+        grid-area: a4;
+    }
+
+    .article5 {
+        grid-area: a5;
+    }
+
+    .article6 {
+        grid-area: a6;
+    }
+
+    .article7 {
+        grid-area: a7;
+    }
+
+    .article8 {
+        grid-area: a8;
+    }
+
+    .smalltext {
+        font-size: 25px;
+    }
+
+    .input {
+        grid-area: fo;
+        height: 400px;
+        width: 90%;
+        background-color: rgb(214, 214, 214, 0.4);
+        border-radius: 10px;
+        font-size: 40px;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-self: center;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    button {
+        background-color: rgb(255, 255, 255);
+        border-style: solid;
+        border-color: rgb(0, 0, 0);
+        font-family: 'Teko', sans-serif;
+        font-size: 2rem;
+        width: 150px;
+        cursor: pointer;
+    }
+
+
+
+
+
+    #container5 {
+        width: 100%;
+        height: 2000px;
+        background-color: rgb(214, 214, 214, 0.4);
+        box-shadow: 30px 30px 30px 20px rgb(0, 0, 0, 0.2);
+        border-radius: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 50px;
+    }
+
+    #container5 > #title2 > h1 {
+        font-family: 'Teko', sans-serif;
+        font-size: 7rem;
+    }
+
+    #title2 {
+        width: 800px;
+        height: 150px;
+        text-align: center;
+        background-color: rgb(214, 214, 214, 0.4);
+        border-radius: 20px;
+    }
+
+    #jobcontainer {
+        width: 1000px;
+        height: 1800px;
+        background-color: rgb(214, 214, 214, 0.4);
+        border-radius: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .line {
+        width: 90%;
+        height: 2px;
+        background-image: linear-gradient(to right, rgb(61, 61, 61, 0), rgb(61, 61, 61, 0.8), rgb(61, 61, 61, 0));
+    }
+
+    .item {
+        width: 90%;
+        height: 400px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .text {
+        height: 100%;
+        width: 50%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .text > h1 {
+        font-family: 'Teko', sans-serif;
+        font-size: 5rem;
+    }
+
+    .text > p {
+        font-size: 25px;
+    }
+
+    .image {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .image > img {
+        height: auto;
+        max-height: 400px;
+        width: 80%;
+        border-radius: 20px;
     }
 
 }
@@ -233,7 +521,7 @@
     header {
         margin-top: 70px;
         padding-top: 10px;
-        padding-bottom: 100px;
+        padding-bottom: 50px;
         width: 95%;
         height: 100px;
         display: flex;
@@ -257,12 +545,22 @@
 
     .logo {
         height: 100%;
-        width: 24%;
-        background-color: royalblue;
+        width: 40%;
+    }
+
+    .logo > img {
+        width: 100px;
+        height: auto;
+        border-radius: 50px;
+        border-color: rgba(214, 214, 214, 0.4);
+        border-style: solid;
+        z-index: 10;
+        box-shadow: 10px 10px 20px 5px rgb(0, 0, 0, 0.3);
     }
 
     .rubrik {
-        height: 70%;
+        z-index: 11;
+        height: 60%;
         width: fit-content;
         font-family: 'Orbitron', sans-serif;
         font-size: 1rem;
@@ -270,12 +568,11 @@
         align-self: center;
         justify-content: space-around;
         align-items: center;
-        background-color: rgb(214, 214, 214, 0.1);
+        background-color: rgb(214, 214, 214, 0.4);
         border-radius: 25px;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-bottom: 10px;
+        padding: 10px 10px 10px 10px;
         text-align: center;
+        box-shadow: 10px 10px 20px 10px rgb(0, 0, 0, 0.3);
     }
 
     #container {
@@ -301,7 +598,7 @@
         width: 100%;
         height: 30%;
         font-size: 40px;
-        background-color: rgb(214, 214, 214, 0.2);
+        background-color: rgb(214, 214, 214, 0.4);
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -351,7 +648,7 @@
     }
 
     .menu > a {
-        font-size: 300%;
+        font-size: 200%;
         color: rgb(184, 184, 184);
         font-family: 'Teko', sans-serif;
     }
@@ -390,7 +687,7 @@
     }
 
     #emptyspace {
-        height: 50%;
+        height: 40%;
     }
 
 
@@ -410,7 +707,7 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        background-color: rgb(214, 214, 214, 0.2);
+        background-color: rgb(214, 214, 214, 0.4);
         border-radius: 50px;
         box-shadow: 30px 30px 30px 20px rgb(0, 0, 0, 0.2);
         text-align: center;
@@ -425,6 +722,293 @@
 
     #container2 > p {
         font-size: 18px;
+    }
+
+
+
+
+
+    #container3 {
+        height: 1000px;
+        width: 100%;
+        margin-top: 10px;
+        display: grid;
+        grid-template-areas: 
+        "he"
+        "ma"
+        "te"
+        "ad"
+        "ot"
+        ;
+    }
+
+    #title {
+        grid-area: he;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #kontaktmail {
+        grid-area: ma;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #kontakttelefon {
+        grid-area: te;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #kontaktadress {
+        grid-area: ad;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #otherinfo {
+        grid-area: ot;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .smallarticle {
+        background-color: rgb(214, 214, 214, 0.4);
+        width: 90%;
+        height: 90%;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 10px 10px 20px 5px rgb(0, 0, 0, 0.3);
+    }
+
+    .smallarticle > h1 {
+        font-family: 'Teko', sans-serif;
+        font-size: 3rem;
+    }
+
+    .smallarticle > p {
+        font-size: 25px;
+    }
+
+
+
+
+
+    #main3 {
+        height: 1900px;
+    }
+
+    #container4 {
+        width: 90%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 20px;
+        background-color: rgb(214, 214, 214, 0.4);
+        box-shadow: 10px 10px 20px 10px rgb(0, 0, 0, 0.3);
+        display: grid;
+        grid-template-areas: 
+        "he he"
+        "a1 a2"
+        "a3 a4"
+        "a5 a6"
+        "a7 a8"
+        "fo fo"
+        ;
+    }
+
+    .title1 {
+        width: 80%;
+        height: 50%;
+        background-color: rgb(214, 214, 214, 0.4);
+        border-radius: 10px;
+        grid-area: he;
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        justify-content: space-around;
+        align-items: center;
+        font-family: 'Teko', sans-serif;
+        font-size: 1.5rem;
+    }
+
+    .articles {
+        width: 90%;
+        height: 300px;
+        background-color: rgb(214, 214, 214, 0.4);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-self: center;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .article1 {
+        grid-area: a1;
+    }
+
+    .article2 {
+        grid-area: a2;
+    }
+
+    .article3 {
+        grid-area: a3;
+    }
+
+    .article4 {
+        grid-area: a4;
+    }
+
+    .article5 {
+        grid-area: a5;
+    }
+
+    .article6 {
+        grid-area: a6;
+    }
+
+    .article7 {
+        grid-area: a7;
+    }
+
+    .article8 {
+        grid-area: a8;
+    }
+
+    .smalltext {
+        font-size: 15px;
+    }
+
+    .input {
+        grid-area: fo;
+        height: 400px;
+        width: 90%;
+        background-color: rgb(214, 214, 214, 0.4);
+        border-radius: 10px;
+        font-size: 40px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-self: center;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    button {
+        background-color: rgb(255, 255, 255);
+        border-style: solid;
+        border-color: rgb(0, 0, 0);
+        font-family: 'Teko', sans-serif;
+        font-size: 2rem;
+        width: 150px;
+        cursor: pointer;
+    }
+
+
+
+
+
+    #container5 {
+        width: 95%;
+        height: 2200px;
+        margin-right: auto;
+        margin-left: auto;
+        background-color: rgb(214, 214, 214, 0.4);
+        box-shadow: 30px 30px 30px 20px rgb(0, 0, 0, 0.2);
+        border-radius: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #container5 > #title2 > h1 {
+        font-family: 'Teko', sans-serif;
+        font-size: 3rem;
+    }
+
+    #title2 {
+        width: 90%;
+        height: 65px;
+        text-align: center;
+        background-color: rgb(214, 214, 214, 0.4);
+        border-radius: 20px;
+    }
+
+    #jobcontainer {
+        width: 90%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: 93%;
+        background-color: rgb(214, 214, 214, 0.4);
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .line {
+        width: 90%;
+        height: 10px;
+        background-image: linear-gradient(to right, rgb(61, 61, 61, 0), rgb(61, 61, 61, 0.8), rgb(61, 61, 61, 0));
+    }
+
+    .item {
+        width: 90%;
+        height: 90%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    .text {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .text > h1 {
+        font-family: 'Teko', sans-serif;
+        font-size: 2rem;
+    }
+
+    .text > p {
+        font-size: 18px;
+    }
+
+    .image {
+        height: auto;
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .image > img {
+        height: auto;
+        padding-top: 10px;
+        max-height: 300px;
+        width: 100%;
+        border-radius: 20px;
     }
 
 }
